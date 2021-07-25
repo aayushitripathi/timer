@@ -5,7 +5,7 @@ h1{
     text-align: center;
     font-weight: bolder;
     font-size: 2.5rem;
-    margin-top: 300px;
+    margin-top: 200px;
 }
 p{
     text-align: center;
@@ -31,4 +31,19 @@ button:hover{
 h5{
     text-align: center;
     font-size: 3rem;
+}
+label{
+    text-align: center;
+    font-size: 1.8rem;
+    margin-left: 850px;
+}
+#hour{
+    margin-left: 700px;
+}
+input{
+    text-align: center;
+    font-size: 1rem;
+    width: 8%;
+    height: 3vh;
+    /* margin-top: 300px; */
 }
