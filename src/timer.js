@@ -9,6 +9,11 @@ window.onload = function () {
     const buttonStart = document.getElementById('start');
     const buttonStop = document.getElementById('pause');
     const buttonReset = document.getElementById('reset');
+    const showhr=document.getElementById('hour');
+    const showmin=document.getElementById('min');
+    const showsec=document.getElementById('sec');
+    const show=document.getElementById('display');
+    const audios=document.querySelector("audio");
     let time ;
     const addtoggle=document.getElementById("toggle");
     const addtoggle2=document.getElementById("toggle2")
@@ -31,10 +36,28 @@ window.onload = function () {
         sec="00"
          mins.innerHTML = minutes;
          secs.innerHTML = sec;
+         showhr.value="";
+         showmin.value="";
+         showsec.value="";
+         audios.pause();
+         show.innerHTML="";
      }
     const starts=()=>{
       sec++; 
-      
+      // show.innerHTML=showhr.value;
+      if(showhr.value==hrs && showmin.value==minutes && showsec.value==sec){
+        show.innerHTML="Time's Up!";
+        audios.play();
+        clearInterval(time);
+        hrs="00"
+        minutes = "00";
+        sec="0"
+         mins.innerHTML = minutes;
+         secs.innerHTML = sec;
+        
+      }
+     
+
       if(sec <= 9){
         secs.innerHTML="0"+sec;
       }
